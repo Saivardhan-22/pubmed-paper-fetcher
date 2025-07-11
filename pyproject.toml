@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetch PubMed papers with non-academic authors from pharma/biotech companies"
+authors = ["Your Name <you@example.com>"]
+packages = [{ include = "pubmed_paper_fetcher", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
